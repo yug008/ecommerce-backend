@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: Ecommerce-Application
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce_db
+    username: postgres
+    password: Yug123
+    driver-class-name: org.postgresql.Driver
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+server:
+  port: 8080
+
+jwt:
+  secret: your_super_secret_key_make_it_long_and_random_atleast_256bits
+  expiration: 86400000
+
+razorpay:
+  key:
+    id: rzp_test_Si8RW57OOOxTpF
+    secret: 6b68VpHAKLQsmpVGzWatcXIM
+  currency: INR
+
+cloudinary:
+  cloud-name: dtml5lqny
+  api-key: 389465687384623
+  api-secret: sixOcA04V63GSHzrSYqnNxqQGDo
+
