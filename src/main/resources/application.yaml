@@ -3,9 +3,9 @@ spring:
     name: Ecommerce-Application
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecommerce_db
-    username: postgres
-    password: Yug123
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   servlet:
@@ -16,7 +16,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -30,12 +30,12 @@ jwt:
 
 razorpay:
   key:
-    id: rzp_test_Si8RW57OOOxTpF
-    secret: 6b68VpHAKLQsmpVGzWatcXIM
+    id: ${RAZORPAY_KEY_ID}
+    secret: ${RAZORPAY_KEY_SECRET}
   currency: INR
 
 cloudinary:
-  cloud-name: dtml5lqny
-  api-key: 389465687384623
-  api-secret: sixOcA04V63GSHzrSYqnNxqQGDo
+  cloud-name: ${CLOUDINARY_CLOUD_NAME}
+  api-key: ${CLOUDINARY_API_KEY}
+  api-secret: ${CLOUDINARY_API_SECRET}
 
