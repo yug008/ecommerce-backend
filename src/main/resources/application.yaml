@@ -22,10 +22,10 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 jwt:
-  secret: your_super_secret_key_make_it_long_and_random_atleast_256bits
+  secret: ${JWT_SECERT}
   expiration: 86400000
 
 razorpay:
